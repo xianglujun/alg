@@ -56,5 +56,6 @@ public class ReplaceEmptyStringSoluation {
         StringBuffer stringBuffer = new StringBuffer();
         stringBuffer.append("dfd                                      sdfdfd");
         System.out.println(replace(stringBuffer));
+
     }
 }

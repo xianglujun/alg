@@ -8,6 +8,7 @@ import lombok.Setter;
  * 给定二叉树的前序遍历结果为: {1,2,4,7,3,5,6,8}
  * 给定二叉树的后续遍历结果为: {4,7,2,1,5,3,8,6}
  *
+ * @author xianglujun
  */
 public class ReconstructResolation {
 

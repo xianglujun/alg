@@ -4,8 +4,9 @@ import java.util.Stack;
 
 /**
  * 通过双栈的方式实现队列
+ * @author xianglujun
  */
-public class DoubleStackForQueueResolation {
+public class DoubleStackForQueueResulation {
 
     private Stack<Integer> stack1 = new Stack<Integer>();
     private Stack<Integer> stack2 = new Stack<Integer>();
@@ -32,16 +33,16 @@ public class DoubleStackForQueueResolation {
     }
 
     public static void main(String[] args) {
-        DoubleStackForQueueResolation resolation = new DoubleStackForQueueResolation();
-        resolation.push(1);
-        resolation.push(2);
-        resolation.push(3);
-        resolation.push(4);
+        DoubleStackForQueueResulation resulation = new DoubleStackForQueueResulation();
+        resulation.push(1);
+        resulation.push(2);
+        resulation.push(3);
+        resulation.push(4);
 
-        System.out.print(resolation.pop());
-        System.out.print(resolation.pop());
-        System.out.print(resolation.pop());
-        System.out.print(resolation.pop());
+        System.out.print(resulation.pop());
+        System.out.print(resulation.pop());
+        System.out.print(resulation.pop());
+        System.out.print(resulation.pop());
     }
 
 }

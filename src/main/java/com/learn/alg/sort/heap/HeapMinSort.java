@@ -48,8 +48,12 @@ public class HeapMinSort {
         int j = 0;
         while (2*k <= len) {
             j = 2*k;
-            if (j < len && less(items, j, j+1)) j++;
-            if (!less(items, k, j)) break;
+            if (j < len && less(items, j, j+1)) {
+                j++;
+            }
+            if (!less(items, k, j)) {
+                break;
+            }
 
             // 交换元素
             exch(items, k, j);

@@ -3,8 +3,7 @@ package com.learn.alg.sort.heap;
 import java.util.Arrays;
 
 /**
- * 该算算法实现堆排序：下沉排序
- * 该算法需要少于2N次比较，以及少于N次交换
+ * 该算算法实现堆排序：下沉排序 该算法需要少于2N次比较，以及少于N次交换 堆排序: 堆排序使用的优先队列, 先将数组构建堆结构，再按照优先队列，将所有元素全部处于有序状态
  */
 public class HeapMinSort {
 
@@ -46,9 +45,8 @@ public class HeapMinSort {
 
     private void sink(Comparable[] items, int k, int len) {
         int j = 0;
-        while (2*k <= len) {
-            j = 2*k;
-            if (j < len && less(items, j, j+1)) {
+        while ((j = 2 * k) <= len) {
+            if (j < len && less(items, j, j + 1)) {
                 j++;
             }
             if (!less(items, k, j)) {

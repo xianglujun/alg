@@ -3,12 +3,12 @@ package com.learn.alg.sort;
 import java.util.Comparator;
 
 /**
- * TODO
+ * 抽象排序算法
  *
  * @author <a href="mailto:xianglj1991@163.com">xianglujun</a>
  * @since 2021/7/9 23:42
  */
-public abstract class AbstractSort<T extends Comparable> implements Sort<T> {
+public abstract class AbstractSort<T> implements Sort<T> {
 
     @Override
     public void exch(T[] items, int i, int k) {

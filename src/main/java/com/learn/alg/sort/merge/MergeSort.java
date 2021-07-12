@@ -1,7 +1,6 @@
 package com.learn.alg.sort.merge;
 
 import com.learn.alg.sort.AbstractSort;
-
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -18,9 +17,9 @@ import java.util.Comparator;
  * @author <a href="mailto:xianglj1991@163.com">xianglujun</a>
  * @since 2021/7/10 22:59
  */
-public class MergeSort<T extends Comparable> extends AbstractSort<T> {
+public class MergeSort<T> extends AbstractSort<T> {
 
-    private Comparable[] aux;
+    private Object[] aux;
 
     @Override
     public void sort(T[] items, Comparator<T> comparator) {
@@ -28,7 +27,7 @@ public class MergeSort<T extends Comparable> extends AbstractSort<T> {
             return;
         }
 
-        aux = new Comparable[items.length];
+        aux = new Object[items.length];
         // 执行排序操作
         sort(items, 0, items.length - 1, comparator);
     }
@@ -40,7 +39,9 @@ public class MergeSort<T extends Comparable> extends AbstractSort<T> {
         }
 
         int mid = lo + ((high - lo) >>> 1);
+        // 左边排序
         sort(items, lo, mid, comparator);
+        // 右边排序
         sort(items, mid + 1, high, comparator);
         // 执行合并操作
         merge(items, lo, mid, high, comparator);
@@ -54,6 +55,7 @@ public class MergeSort<T extends Comparable> extends AbstractSort<T> {
      * @param mid   中间索引
      * @param high  高位索引
      */
+    @SuppressWarnings("unchecked")
     private void merge(T[] items, int lo, int mid, int high, Comparator<T> comparator) {
         // 第一步：将items[lo..high] 拷贝到 aux[lo..high]
         int i = lo, j = mid + 1;
@@ -82,7 +84,7 @@ public class MergeSort<T extends Comparable> extends AbstractSort<T> {
 
     public static void main(String[] args) {
         Integer[] items = new Integer[]{7, 6, 5, 4, 3, 23, 45};
-        MergeSort<Integer> mergeSort = new MergeSort<Integer>();
+        MergeSort<Integer> mergeSort = new MergeSort<>();
         mergeSort.sort(items, Comparator.reverseOrder());
 
         System.out.println(Arrays.toString(items));

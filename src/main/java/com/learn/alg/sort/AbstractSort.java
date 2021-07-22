@@ -21,4 +21,9 @@ public abstract class AbstractSort<T extends Comparable> implements Sort<T> {
     public boolean less(T[] items, int i, int k, Comparator<T> comparator) {
         return comparator.compare(items[i], items[k]) < 0;
     }
+
+    @Override
+    public boolean less(T i, T k, Comparator<T> comparator) {
+        return comparator.compare(i, k) < 0;
+    }
 }

@@ -15,4 +15,6 @@ public interface Sort<T> {
     void exch(T[] items, int i, int k);
 
     boolean less(T[] items, int i, int k, Comparator<T> comparator);
+
+    boolean less(T i, T k, Comparator<T> comparator);
 }

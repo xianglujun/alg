@@ -27,7 +27,6 @@ public class HeapMinSort {
 
     /**
      * 排揎当前算法
-     *
      * @param items
      */
     public void sort(Comparable[] items) {

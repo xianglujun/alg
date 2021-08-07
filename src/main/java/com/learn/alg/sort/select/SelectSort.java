@@ -1,7 +1,6 @@
 package com.learn.alg.sort.select;
 
 import com.learn.alg.sort.AbstractSort;
-
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -17,7 +16,7 @@ import java.util.Comparator;
  * @author <a href="mailto:xianglj1991@163.com">xianglujun</a>
  * @since 2021/7/9 23:37
  */
-public class SelectSort<T extends Comparable> extends AbstractSort<T> {
+public class SelectSort<T> extends AbstractSort<T> {
 
     @Override
     public void sort(T[] items, Comparator<T> comparator) {
@@ -38,7 +37,7 @@ public class SelectSort<T extends Comparable> extends AbstractSort<T> {
 
     public static void main(String[] args) {
         Integer[] items = new Integer[]{7, 6, 5, 4, 3, 23, 45};
-        SelectSort<Integer> selectSort = new SelectSort<Integer>();
+        SelectSort<Integer> selectSort = new SelectSort<>();
         selectSort.sort(items, Comparator.reverseOrder());
 
         System.out.println(Arrays.toString(items));

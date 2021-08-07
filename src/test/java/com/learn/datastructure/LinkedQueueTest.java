@@ -39,4 +39,8 @@ public class LinkedQueueTest {
         System.out.println("测试用例耗时:" + duration + " ms");
     }
 
+    public static void main(String[] args) {
+        System.out.println("测试");
+    }
+
 }

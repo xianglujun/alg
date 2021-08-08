@@ -12,8 +12,20 @@ public interface SortedST<Key extends Comparable, Value> extends ST<Key, Value> 
 
     Key max();
 
+    /**
+     * 小于等于key的最大值
+     *
+     * @param key key值信息
+     * @return 小于等于key的最大值
+     */
     Key floor(Key key);
 
+    /**
+     * 大于等于{@code key}的最小key
+     *
+     * @param key 对应的key值
+     * @return 大于等于key的最小值
+     */
     Key ceiling(Key key);
 
     /**

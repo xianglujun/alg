@@ -1,5 +1,8 @@
 package com.learn.alg.sort;
 
+/**
+ * @author 自来也
+ */
 public class MaxPQ<Item extends Comparable> {
 
     private Item[] items;

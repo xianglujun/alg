@@ -31,8 +31,8 @@ public class HeapMinSort {
      */
     public void sort(Comparable[] items) {
         // 获取数据的长度
-        int len = items.length-1;
-        for (int k = len/2; k > 0; k--) {
+        int len = items.length - 1;
+        for (int k = len / 2; k > 0; k--) {
             // 将元素按照从右到做的顺序，执行下沉操作
             sink(items, k, len);
         }
@@ -46,10 +46,14 @@ public class HeapMinSort {
 
     private void sink(Comparable[] items, int k, int len) {
         int j = 0;
-        while (2*k <= len) {
-            j = 2*k;
-            if (j < len && less(items, j, j+1)) j++;
-            if (!less(items, k, j)) break;
+        while (2 * k <= len) {
+            j = 2 * k;
+            if (j < len && less(items, j, j + 1)) {
+                j++;
+            }
+            if (!less(items, k, j)) {
+                break;
+            }
 
             // 交换元素
             exch(items, k, j);

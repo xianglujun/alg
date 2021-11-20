@@ -21,6 +21,8 @@
     </build>
 
     <properties>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
         <lombok.version>1.16.18</lombok.version>
     </properties>
 
@@ -28,7 +30,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.37</version>
+            <version>1.2.76</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -50,5 +52,4 @@
             <version>${lombok.version}</version>
         </dependency>
     </dependencies>
-    
 </project>

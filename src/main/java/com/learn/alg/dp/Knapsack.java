@@ -1,4 +1,4 @@
-package com.learn.alg.dc;
+package com.learn.alg.dp;
 
 /**
  * 动态规划中的背包问题:

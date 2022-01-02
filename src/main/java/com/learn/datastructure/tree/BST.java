@@ -1,4 +1,6 @@
-package com.learn.datastructure.st;
+package com.learn.datastructure.tree;
+
+import com.learn.datastructure.st.AbstractSortedST;
 
 import java.util.LinkedList;
 

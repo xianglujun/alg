@@ -1,6 +1,7 @@
 package com.learn.alg.sort.select;
 
 import com.learn.alg.sort.AbstractSort;
+
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -32,6 +33,8 @@ public class SelectSort<T> extends AbstractSort<T> {
                 }
             }
             exch(items, i, min);
+            System.out.println(Arrays.toString(items));
+            System.out.println("--------------------");
         }
     }
 

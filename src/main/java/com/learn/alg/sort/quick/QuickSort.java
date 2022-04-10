@@ -50,6 +50,7 @@ public class QuickSort<T extends Comparable> extends AbstractSort<T> {
         if (lo >= hi) {
             return lo;
         }
+        // 选取第一个元素
         T v = items[lo];
         int j = hi + 1;
         int i = lo;

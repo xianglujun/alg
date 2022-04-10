@@ -33,7 +33,7 @@ public class HeapMinSort {
         // 获取数据的长度
         int len = items.length - 1;
         for (int k = len / 2; k > 0; k--) {
-            // 将元素按照从右到做的顺序，执行下沉操作
+            // 将元素按照从右到左的顺序，执行下沉操作
             sink(items, k, len);
         }
 

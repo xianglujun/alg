@@ -42,7 +42,7 @@ public class BucketSort {
         }
         // 将元素对应到各自的桶中
         for (Integer e : elements) {
-            buckets.get((e - min) / bucketCount).add(e);
+            buckets.get((e - min) / bucketCap).add(e);
         }
 
         // 查看桶中的元素数量
@@ -87,7 +87,7 @@ public class BucketSort {
 
     public static void main(String[] args) {
         List<Integer> elements = Arrays.asList(1, 5, 6, 2, 1, 3, 2, 1, 23, 6, 9, 23, 48, 89);
-        new BucketSort().BucketSort(elements, 2);
+        new BucketSort().BucketSort(elements, 25);
         System.out.println(Arrays.toString(elements.toArray()));
     }
 }

@@ -73,6 +73,7 @@ public class StringIsValid {
     }
 
     public static void main(String[] args) {
-        new StringIsValid().isValid("()");
+        boolean result = new StringIsValid().isValid("([)]");
+        System.out.println(result);
     }
 }

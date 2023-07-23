@@ -1,10 +1,11 @@
 package com.learn.datastructure.ch1.queue;
 
-import java.util.Iterator;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+
+import java.util.Iterator;
 
 /**
  * 通过链表的数据结果实现队列
@@ -19,6 +20,7 @@ public class LinkedQueue<Item> implements Queue<Item> {
      * 节点的第一个节点
      */
     private Node first;
+    private Node tail;
 
     private int size;
 
@@ -42,8 +44,10 @@ public class LinkedQueue<Item> implements Queue<Item> {
         Node next = new Node(item, null);
         if (first == null) {
             first = next;
+            tail = next;
         } else {
-            first.next = next;
+            tail.next = next;
+            this.tail = next;
         }
         size++;
     }
@@ -56,6 +60,10 @@ public class LinkedQueue<Item> implements Queue<Item> {
 
         Node node = first;
         first = node.next;
+
+        if (first == this.tail) {
+            tail = null;
+        }
 
         return node.item;
     }

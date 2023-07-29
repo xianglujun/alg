@@ -1,6 +1,7 @@
 package com.learn.alg.sort.merge;
 
 import com.learn.alg.sort.AbstractSort;
+
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -30,6 +31,34 @@ public class MergeSort<T> extends AbstractSort<T> {
         aux = new Object[items.length];
         // 执行排序操作
         sort(items, 0, items.length - 1, comparator);
+    }
+
+    public static void mergeSort(int[] arr) {
+        if (arr == null || arr.length < 2) {
+            return;
+        }
+        int N = arr.length;
+        int mergetSize = 1; // 当前有序左边数组长度
+        while (mergetSize < N) {
+            int L = 0; // 左边其实索引位置
+            while (L < N) {
+                // L ... M 左组(mergeSize)
+                int M = L + mergetSize - 1;
+                if (M >= N) {
+                    break; // 越界
+                }
+                // 右组: M + 1 ... R
+                int R = Math.min(M + mergetSize, N - 1);
+                // 合并
+//                merge(arr, L, M, R);
+                L = R + 1;
+            }
+            // 防止整型溢出带来的问题
+            if (mergetSize > (N >> 2)) {
+                break;
+            }
+            mergetSize <<= 1;
+        }
     }
 
     public void sort(T[] items, int lo, int high, Comparator<T> comparator) {

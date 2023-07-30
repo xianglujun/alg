@@ -33,6 +33,11 @@ public class MergeSort<T> extends AbstractSort<T> {
         sort(items, 0, items.length - 1, comparator);
     }
 
+    /**
+     * merge的合并算法
+     *
+     * @param arr
+     */
     public static void mergeSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;

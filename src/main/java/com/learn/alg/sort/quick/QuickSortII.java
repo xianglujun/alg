@@ -1,11 +1,11 @@
-package com.learn.alg.leetcode.sort;
+package com.learn.alg.sort.quick;
 
 import java.util.Arrays;
 
 /**
  * 快排实现
  */
-public class QuickSort {
+public class QuickSortII {
 
     /**
      * 给定一个数，将数组中小于num的数放在左边，大于num的数放在右边
@@ -35,6 +35,14 @@ public class QuickSort {
         return processThree(arr, 0, arr.length - 1, num);
     }
 
+    /**
+     * 数字的选择，则使用随机的数字选择
+     *
+     * @param arr 需要排序的数组
+     * @param l   左索引
+     * @param r   右索引
+     * @return 等于value开始和结束索引
+     */
     public int[] netherLandFlags(int[] arr, int l, int r) {
         return new int[]{0, 0};
     }
@@ -81,7 +89,7 @@ public class QuickSort {
     public static void main(String[] args) {
         int[] arr = new int[]{1, 4, 2, 5, 7, 2, 3};
 
-        QuickSort quickSort = new QuickSort();
+        QuickSortII quickSort = new QuickSortII();
         System.out.println(quickSort.splitNum(arr, 4));
         System.out.println(Arrays.toString(arr));
 
